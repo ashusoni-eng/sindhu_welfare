@@ -1,5 +1,5 @@
  <?php extract($member); ?>
- <div class="col-lg-3 col-md-6 col-sm-6 col-6 wow fadeInUp" data-wow-delay="0.1s">
+ <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
      <a href="<?php echo base_url('member/profile'); ?>">
          <div class="team-item rounded">
              <img class="img-fluid" src="/assets/img/team-1.jpg" alt="" />
