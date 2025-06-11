@@ -105,6 +105,6 @@
 
 <?php echo $this->include('Partials/contact_form'); ?>
 
-<?php echo $this->include('Partials/dice_members'); ?>
+
 
 <?php echo $this->endSection(); ?>
