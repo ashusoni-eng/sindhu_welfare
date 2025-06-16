@@ -6,7 +6,14 @@
         </div>
         <div class="row g-4">
 
-           <?php echo $this->include('Partials/member_card');?>
+            <?php if (! empty($members)): ?>
+                <?php foreach ($members as $member): ?>
+
+                    <?= view('Partials/member_card', ['member' => $member]); ?>
+
+                <?php endforeach; ?>
+
+            <?php endif; ?>
 
         </div>
     </div>

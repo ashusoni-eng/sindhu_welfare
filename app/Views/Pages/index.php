@@ -103,6 +103,8 @@
 
 <?php echo $this->include('Partials/services'); ?>
 
+<?php echo $this->include('Partials/dice_members'); ?>
+
 <?php echo $this->include('Partials/contact_form'); ?>
 
 
