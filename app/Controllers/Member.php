@@ -10,7 +10,7 @@ class Member extends BaseController
     {
         $model = new MembersModel();
 
-        $data['members'] = $model->where('status', 1)->findAll();
+        $data['members'] = $model->where('status', 1)->orderBy('name', 'ASC')->findAll();
 
         $data['title'] = 'Members';
 

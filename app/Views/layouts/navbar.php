@@ -1,6 +1,6 @@
 <!-- Navbar Start -->
 <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5">
-    <a href="index.html" class="navbar-brand d-flex align-items-center">
+    <a href="<?php echo base_url('/') ?>" class="navbar-brand d-flex align-items-center">
         <h1 class="m-0">
             <img class="img-fluid me-3" src="/assets/img/logo.png" alt="" />
         </h1>
@@ -10,10 +10,11 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav mx-auto bg-light rounded pe-4 py-3 py-lg-0">
-            <a href="index.html" class="nav-item nav-link active">Home</a>
-            <a href="about.html" class="nav-item nav-link">About Us</a>
-            <a href="service.html" class="nav-item nav-link">Our Vision</a>
-            <a href="<?php echo base_url('members')?>" class="nav-item nav-link">Members</a>
+            <a href="<?php echo base_url('/') ?>" class="nav-item nav-link active">Home</a>
+            <a href="<?php echo base_url('/about') ?>" class="nav-item nav-link">About Us</a>
+            <!-- <a href="service.html" class="nav-item nav-link">Our Vision</a> -->
+            <a href="<?php echo base_url('/gallery') ?>" class="nav-item nav-link">Gallery</a>
+            <a href="<?php echo base_url('members/all') ?>" class="nav-item nav-link">Members</a>
             <a href="contact.html" class="nav-item nav-link">Events</a>
             <!-- <div class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
@@ -27,6 +28,6 @@
             </div> -->
         </div>
     </div>
-    <a href="" class="btn btn-primary px-3 d-none d-lg-block">Contact Us</a>
+    <a href="<?php echo base_url('/contact') ?>" class="btn btn-primary px-3 d-none d-lg-block">Contact Us</a>
 </nav>
 <!-- Navbar End -->
