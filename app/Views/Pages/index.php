@@ -8,7 +8,12 @@
     <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item ">
-                <img class="w-100 homeImg" src="/assets/img/welfare1.jpg" alt="Image" />
+                <!-- <img class="w-100 homeImg" src="/assets/img/home3.jpg" alt="Image" />           -->
+                <picture>
+                    <source srcset="/assets/img/home3.jpg" media="(max-width: 600px)">
+                    <img src="/assets/img/home1.jpg" alt="Description of image" class="w-100 homeImg">
+                </picture>  
+
                 <div class="carousel-caption">
                     <div class="container">
                         <div class="row">
@@ -19,14 +24,17 @@
                                 <p class="fs-5 text-body mb-5">
                                     Preserving Sindhi culture and serving the community with devotion.
                                 </p>
-                                <a href="" class="btn btn-primary py-3 px-5">More Details</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="carousel-item active">
-                <img class="w-100 homeImg" src="/assets/img/welfare2.jpg" alt="Image" />
+                <!-- <img class="w-100 homeImg" src="/assets/img/home3.jpg" alt="Image" /> -->
+                    <picture>
+                        <source srcset="/assets/img/home11.jpg" media="(max-width: 600px)">
+                        <img src="/assets/img/home13.jpg" alt="Description of image" class="w-100 homeImg">
+                    </picture>
                 <div class="carousel-caption">
                     <div class="container">
                         <div class="row">
@@ -37,7 +45,6 @@
                                 <p class="fs-5 text-body mb-5">
                                     Committed to religious, cultural, and social upliftment.
                                 </p>
-                                <a href="" class="btn btn-primary py-3 px-5">More Details</a>
                             </div>
                         </div>
                     </div>

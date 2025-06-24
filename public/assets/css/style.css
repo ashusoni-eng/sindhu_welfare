@@ -490,7 +490,7 @@
 
 
 .homeImg {
-    height: 46rem;
+    height: 43rem;
 }
 
 .event-card {
@@ -777,6 +777,7 @@ i {
     opacity: 1;
 }
 
+
 /* Responsive adjustments */
 @media (max-width: 767.98px) {
     .hero-gallery-section h1 {
@@ -790,6 +791,19 @@ i {
     .gallery-item img {
         height: 200px;
         /* Slightly smaller height on mobile */
+    }
+
+    .carousel-caption h1 {
+        font-size: 2rem;
+        width: 17rem;
+    }
+
+    .carousel-caption p {
+        width: 17rem;
+    }
+
+    .headingMain{
+        font-size: 1.1rem;
     }
 }
 
