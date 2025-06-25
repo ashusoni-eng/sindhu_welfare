@@ -11,7 +11,14 @@ class GalleryController extends BaseController
         $title = 'Gallery | ' . config('App')->name;
         $model = new GalleryModel();
 
-        $data['gallery'] = $model->orderBy('id', 'DESC')->findAll();
+        $allGallery = $model->orderBy('year', 'DESC')->findAll();
+
+        $grouped = [];
+        foreach ($allGallery as $item) {
+            $grouped[$item['year']][] = $item;
+        }
+
+        $data['gallery'] = $grouped;
 
         $data['title'] = $title;
 

@@ -16,4 +16,38 @@ class Member extends BaseController
 
         return view('Pages/members', $data);
     }
+
+    public function memberProfile($id)
+    {
+        $member = new \App\Models\MembersModel();
+
+        $data['member'] = $member->where('id', $id)->first();
+
+        $data['title'] = $data['member']['name'] . ' | ' . config('App')->name;
+
+        $photo      = $data['member']['photo'];
+        $photoPath  = FCPATH . 'members/' . $photo;
+        $finalPhoto = (is_file($photoPath) && ! empty($photo)) ? $photo : 'default.png';
+
+        $data['photo'] = $finalPhoto;
+
+        return view('Pages/profile', $data);
+    }
+
+    public function single($id)
+    {
+        $member = new \App\Models\MembersModel();
+
+        $data['member'] = $member->where('id', $id)->first();
+
+        $data['title'] = $data['member']['name'] . ' | ' . config('App')->name;
+
+        $photo      = $data['member']['photo'];
+        $photoPath  = FCPATH . 'members/' . $photo;
+        $finalPhoto = (is_file($photoPath) && ! empty($photo)) ? $photo : 'default.png';
+
+        $data['photo'] = $finalPhoto;
+
+        return view('Pages/single_member', $data);
+    }
 }

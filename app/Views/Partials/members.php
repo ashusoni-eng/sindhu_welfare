@@ -1,21 +1,36 @@
-<!-- Team Start -->
+<!-- Members Start -->
 <div class="container-xxl py-5">
     <div class="container">
         <div class="text-center mx-auto" style="max-width: 500px">
             <h1 class="display-6 mb-5">Members</h1>
         </div>
-        <div class="row g-4">
+        <div class="row g-4 table-responsive">
 
-            <?php if (! empty($members)): ?>
-                <?php foreach ($members as $member): ?>
-
-                    <?= view('Partials/member_card', ['member' => $member]); ?>
-
-                <?php endforeach; ?>
-
-            <?php endif; ?>
-
+        <table class="table table-striped table-hover table-bordered">
+            <thead class="bg-primary text-white">
+                <tr>
+                    <th>SN</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Organization</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php if (! empty($members)): ?>
+                    <?php foreach ($members as $i => $member): ?>                    
+                        <tr>
+                            <td><?= $i + 1 ?></td>
+                            <td><?= $member['name'] ?></td>
+                            <td><?= $member['office_name'] ?? '--' ?></td>
+                            <td>
+                                <a class="btn btn-primary btn-sm" href="<?= base_url('members/single/' . $member['id']) ?>">View</a>
+                            </td>
+                        </tr>                                                    
+                    <?php endforeach; ?>
+                <?php endif; ?>
+            </tbody>
+        </table>            
         </div>
     </div>
 </div>
-<!-- Team End -->
+<!-- Members End -->

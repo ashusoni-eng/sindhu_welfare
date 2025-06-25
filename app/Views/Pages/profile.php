@@ -3,16 +3,28 @@
 
 <?php echo $this->section('content'); ?>
 
+<?php
+
+$bgColor = '#D7CED1';
+if($photo == 'default.png') {
+    $bgColor = '#F8F8F8';
+}
+
+?>
+
 <div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-md-8 col-lg-7">
+            <div class="text-end">
+                <a href="<?= base_url('members/all') ?>" class="btn btn-primary mb-3 px-5">Back</a>
+            </div>
             <div class="card shadow-sm">
                 <div class="card-header bg-primary text-white text-center py-3">
                     <h4 class="mb-0 text-white">Member Profile</h4>
                 </div>
                 <div class="card-body">
                     <div class="text-center mb-4">
-                        <img src="/members/<?php echo esc($photo) ?>" alt="<?php echo esc($member['name']) ?>" class="img-fluid rounded-circle" style="width: 200px; height: 200px; object-fit: contain; border: 3px solid #953700;background-color: #D7CED1">
+                        <img src="/members/<?php echo esc($photo) ?>" alt="<?php echo esc($member['name']) ?>" class="img-fluid rounded-circle" style="width: 200px; height: 200px; object-fit: contain; border: 3px solid #953700;background-color: <?php echo $bgColor ?>">
                     </div>
 
                     <div class="row mb-2">
@@ -42,6 +54,10 @@
                     <div class="row mb-2">
                         <div class="col-sm-4 text-sm-end"><strong>Qualification:</strong></div>
                         <div class="col-sm-8"><?php echo esc($member['qualification']) ?? '--' ?></div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col-sm-4 text-sm-end"><strong>Blood Group:</strong></div>
+                        <div class="col-sm-8"><?php echo esc($member['blood_group']) ?? '--' ?></div>
                     </div>
                     <hr class="my-4">
                     <div class="row mb-2">
