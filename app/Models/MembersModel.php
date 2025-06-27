@@ -5,15 +5,15 @@ use CodeIgniter\Model;
 
 class MembersModel extends Model
 {
-    protected $table = 'members';
-    protected $pprimaryKey = 'id';
+    protected $table         = 'members';
+    protected $pprimaryKey   = 'id';
     protected $allowedFields = ['name', 'dob', 'wife', 'date_of_marriage', 'father_name', 'mother_name', 'qualification', 'residencial_address', 'residencial_phone', 'mobile', 'email', 'office_name', 'office_phone', 'office_address', 'member_type', 'photo', 'status', 'created_at', 'updated_at'];
 
     public function get_members($start, $length, $search = '')
     {
         $builder = $this->db->table($this->table);
 
-        if (!empty($search)) {
+        if (! empty($search)) {
             $builder->like('name', $search);
             $builder->orLike('office_name', $search);
         }
@@ -30,7 +30,7 @@ class MembersModel extends Model
     {
         $builder = $this->db->table($this->table);
 
-        if (!empty($search)) {
+        if (! empty($search)) {
             $builder->like('name', $search);
         }
 
@@ -41,6 +41,11 @@ class MembersModel extends Model
     {
         $builder = $this->db->table($this->table);
 
-        return $builder->orderBy('name', 'ASC')->limit(8)->get()->getResultArray();
+        return $builder
+            ->whereNotIn('member_type', ['member', 'working committee'])
+            ->orderBy("FIELD(member_type, 'president', 'vice president', 'joint president', 'secretary',  'joint secretary', 'former president',  'treasurer')", '', false)
+            ->get()
+            ->getResultArray();
     }
+
 }

@@ -31,7 +31,7 @@
     <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- Template Stylesheet -->
-    <link href="/assets/css/style.css?v4" rel="stylesheet" />
+    <link href="/assets/css/style.css?v5" rel="stylesheet" />
 </head>
 
 <body>

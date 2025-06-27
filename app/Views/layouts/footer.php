@@ -57,7 +57,7 @@
                     &copy; <a href="#"><?php echo config('App')->name . ' @' . date('Y'); ?></a>, All Right Reserved.
                 </div>
                 <div class="col-md-6 text-center text-md-end">
-                    Designed & Developed By <a href="https://margservice.in" class="text-white">PrimeSync</a>
+                    Designed & Developed By <a href="https://margservice.in" class="text-white">PrimeTechLogix</a>
                 </div>
             </div>
         </div>

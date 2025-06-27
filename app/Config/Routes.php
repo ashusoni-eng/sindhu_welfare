@@ -15,6 +15,7 @@ $routes->get('/events', 'EventController::index');
 $routes->get('/gallery', 'GalleryController::index');
 $routes->get('/member/profile/(:segment)', 'Member::memberProfile/$1');
 $routes->get('/members/all', 'Member::index');
+$routes->get('/members/dice-and-working-committee', 'Member::working_committee');
 $routes->get('/members/single/(:segment)', 'Member::single/$1');
 
 $routes->get('/import', 'CsvImportController::index');

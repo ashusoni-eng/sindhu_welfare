@@ -15,7 +15,7 @@
     <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
         <div class="navbar-nav  bg-light rounded pe-4 py-3 py-lg-0">
             <a href="<?= base_url('/') ?>" class="nav-item nav-link <?= $current === '' ? 'active' : '' ?>">Home</a>
-            <a href="<?= base_url('/') ?>" class="nav-item nav-link <?= $current === '' ? '1active' : '' ?>">Dice & Working Committee</a>
+            <a href="<?= base_url('/members/dice-and-working-committee') ?>" class="nav-item nav-link <?= $current === 'members/dice-and-working-committee' ? 'active' : '' ?>">Dice & Working Committee</a>
             <a href="<?= base_url('gallery') ?>" class="nav-item nav-link <?= $current === 'gallery' ? 'active' : '' ?>">Gallery</a>
             <a href="<?= base_url('members/all') ?>" class="nav-item nav-link <?= $current === 'members/all' ? 'active' : '' ?>">Members</a>
             <a href="<?= base_url('events') ?>" class="nav-item nav-link <?= $current === 'events' ? 'active' : '' ?>">Events</a>

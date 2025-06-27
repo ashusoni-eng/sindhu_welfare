@@ -17,6 +17,18 @@ class Member extends BaseController
         return view('Pages/members', $data);
     }
 
+    public function working_committee()
+    {
+        $model = new MembersModel();
+
+        $data['members'] = $model->where('member_type !=', 'member')
+            ->orderBy("FIELD(member_type, 'president', 'vice president', 'joint president', 'secretary',  'joint secretary', 'former president',  'treasurer' ,'working committee')", '', false)->findAll();
+
+        $data['title'] = 'Dice & Working Committee';
+
+        return view('Pages/wokring_committee', $data);
+    }
+
     public function memberProfile($id)
     {
         $member = new \App\Models\MembersModel();

@@ -7,8 +7,8 @@
             <small>+012 345 6789</small>
           </div> -->
               <div class="h-100 d-inline-flex align-items-center me-4">
-                  <small class="far fa-envelope-open me-2"></small>
-                  <small>info@example.com</small>
+                  <small class="far fa-user me-2"></small>
+                  <small>Coordinated by Vikas Dawani</small>
               </div>
               <!-- <div class="h-100 d-inline-flex align-items-center me-4">
             <small class="far fa-clock me-2"></small>

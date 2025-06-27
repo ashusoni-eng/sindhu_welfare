@@ -1,8 +1,8 @@
 <!-- Members Start -->
 <div class="container-xxl py-5">
     <div class="container">
-        <div class="text-center mx-auto" style="max-width: 500px">
-            <h1 class="display-6 mb-5">Members</h1>
+        <div class="text-center mx-auto" style="max-width: 1000px">
+            <h1 class="display-6 mb-5"><?= ucwords($title) ?></h1>
         </div>
         <div class="row g-4 table-responsive">
 
@@ -19,7 +19,7 @@
                 <?php if (! empty($members)): ?>
                     <?php foreach ($members as $i => $member): ?>                    
                         <?php
-                            $nameColorClass = $member['member_type'] != 'member' && $member['member_type'] != 'working committee' ? 'text-primary' : '';    
+                            $nameColorClass = $member['member_type'] != 'member' && $member['member_type'] ? 'text-primary' : '';    
                             $post = $member['member_type'] != 'member' && $member['member_type'] != 'working committee' ? ucwords($member['member_type']) : '';
                         ?>
                         <tr>
