@@ -10,8 +10,8 @@
             <div class="carousel-item ">
                 <!-- <img class="w-100 homeImg" src="/assets/img/home3.jpg" alt="Image" />           -->
                 <picture>
-                    <source srcset="/assets/img/home3.jpg" media="(max-width: 600px)">
-                    <img src="/assets/img/home1.jpg" alt="Description of image" class="w-100 homeImg">
+                    <source srcset="/assets/img/home1.jpg" media="(max-width: 600px)">
+                    <img src="/assets/img/home3.jpg" alt="Description of image" class="w-100 homeImg">
                 </picture>  
 
                 <div class="carousel-caption">
@@ -32,8 +32,8 @@
             <div class="carousel-item active">
                 <!-- <img class="w-100 homeImg" src="/assets/img/home3.jpg" alt="Image" /> -->
                     <picture>
-                        <source srcset="/assets/img/home11.jpg" media="(max-width: 600px)">
-                        <img src="/assets/img/home13.jpg" alt="Description of image" class="w-100 homeImg">
+                        <source srcset="/assets/img/home12.jpg" media="(max-width: 600px)">
+                        <img src="/assets/img/home11.jpg" alt="Description of image" class="w-100 homeImg">
                     </picture>
                 <div class="carousel-caption">
                     <div class="container">
