@@ -21,7 +21,7 @@
                                 <h1 class="display-3 text-dark mb-4 animated slideInDown">
                                     Unity, Culture, Service, Devotion
                                 </h1>
-                                <p class="fs-5 text-body mb-5">
+                                <p class="fs-5 text-body ">
                                     Preserving Sindhi culture and serving the community with devotion.
                                 </p>
                             </div>
@@ -29,7 +29,7 @@
                         <div class="founder">
                             <h5><?= config('App')->founderPrefix ?></h5>
                             <h5><?= config('App')->founderName ?></h5>
-                            <p class="fs-6 text-body mb-5">
+                            <p class="fs-6 text-body ">
                                 Founder Chairman (<?= config('App')->founderDOB ?> – <?= config('App')->founderDOE ?>)<br>
                                 In Loving Memory
                             </p>
@@ -51,7 +51,7 @@
                                 <h1 class="display-3 text-dark mb-4 animated slideInDown">
                                     Empowering Community Through Values
                                 </h1>
-                                <p class="fs-5 text-body mb-5">
+                                <p class="fs-5 text-body ">
                                     Committed to religious, cultural, and social upliftment.
                                 </p>
                             </div>
@@ -59,7 +59,7 @@
                         <div class="founder">
                             <h5><?= config('App')->founderPrefix ?></h5>
                             <h5><?= config('App')->founderName ?></h5>
-                            <p class="fs-6 text-body mb-5">
+                            <p class="fs-6 text-body ">
                                 Founder Chairman (<?= config('App')->founderDOB ?> – <?= config('App')->founderDOE ?>)<br>
                                 In Loving Memory
                             </p>

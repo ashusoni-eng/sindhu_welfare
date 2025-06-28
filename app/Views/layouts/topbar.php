@@ -1,7 +1,7 @@
   <!-- Topbar Start -->
   <div class="container-fluid bg-dark text-white-50 py-2 px-0  topbar">
       <div class="row gx-0 align-items-center">
-          <div class="col-7 px-2 text-start">              
+          <div class="col-7 px-1 text-start">              
               <div class="h-100 d-inline-flex align-items-center me-4">
                   <small class="far fa-user me-2"></small>
                   <small>Coordinated by Vikas Dawani</small>
