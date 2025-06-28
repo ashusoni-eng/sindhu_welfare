@@ -30,7 +30,8 @@
                             <h5><?= config('App')->founderPrefix ?></h5>
                             <h5><?= config('App')->founderName ?></h5>
                             <p class="fs-6 text-primary ">
-                                Founder Chairman (<?= config('App')->founderDOB ?> – <?= config('App')->founderDOE ?>)<br>
+                                Founder Chairman <br>
+                                (<?= config('App')->founderDOB ?> – <?= config('App')->founderDOE ?>)<br>
                                 In Loving Memory
                             </p>
                         </div>
@@ -60,7 +61,8 @@
                             <h5><?= config('App')->founderPrefix ?></h5>
                             <h5><?= config('App')->founderName ?></h5>
                             <p class="fs-6 text-primary ">
-                                Founder Chairman (<?= config('App')->founderDOB ?> – <?= config('App')->founderDOE ?>)<br>
+                                Founder Chairman <br>
+                                (<?= config('App')->founderDOB ?> – <?= config('App')->founderDOE ?>)<br>
                                 In Loving Memory
                             </p>
                         </div>
