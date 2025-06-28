@@ -5,14 +5,14 @@
 
 <!-- Carousel Start -->
 <div class="container-fluid p-0 mb-5 wow fadeIn" data-wow-delay="0.1s">
-    <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
+    <div id="header-carousel" class="carousel slide" data-bs-ride="">
         <div class="carousel-inner">
             <div class="carousel-item ">
                 <!-- <img class="w-100 homeImg" src="/assets/img/home3.jpg" alt="Image" />           -->
                 <picture>
                     <source srcset="/assets/img/home1.jpg" media="(max-width: 600px)">
                     <img src="/assets/img/home3.jpg" alt="Description of image" class="w-100 homeImg">
-                </picture>  
+                </picture>
 
                 <div class="carousel-caption">
                     <div class="container">
@@ -26,15 +26,24 @@
                                 </p>
                             </div>
                         </div>
+                        <div class="founder">
+                            <h5><?= config('App')->founderPrefix ?></h5>
+                            <h5><?= config('App')->founderName ?></h5>
+                            <p class="fs-6 text-body mb-5">
+                                Founder Chairman (<?= config('App')->founderDOB ?> – <?= config('App')->founderDOE ?>)<br>
+                                In Loving Memory
+                            </p>
+                        </div>
+
                     </div>
                 </div>
             </div>
             <div class="carousel-item active">
                 <!-- <img class="w-100 homeImg" src="/assets/img/home3.jpg" alt="Image" /> -->
-                    <picture>
-                        <source srcset="/assets/img/home12.jpg" media="(max-width: 600px)">
-                        <img src="/assets/img/home11.jpg" alt="Description of image" class="w-100 homeImg">
-                    </picture>
+                <picture>
+                    <source srcset="/assets/img/home12.jpg" media="(max-width: 600px)">
+                    <img src="/assets/img/home11.jpg" alt="Description of image" class="w-100 homeImg">
+                </picture>
                 <div class="carousel-caption">
                     <div class="container">
                         <div class="row">
@@ -46,6 +55,14 @@
                                     Committed to religious, cultural, and social upliftment.
                                 </p>
                             </div>
+                        </div>
+                        <div class="founder">
+                            <h5><?= config('App')->founderPrefix ?></h5>
+                            <h5><?= config('App')->founderName ?></h5>
+                            <p class="fs-6 text-body mb-5">
+                                Founder Chairman (<?= config('App')->founderDOB ?> – <?= config('App')->founderDOE ?>)<br>
+                                In Loving Memory
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -73,7 +90,11 @@
                 <div class="h-100 px-4 ps-lg-0">
                     <h1 class="text-white mb-4">Welcome to the Sindhu Welfare Society, Gwalior</h1>
                     <p class="text-light mb-5">
-                        Dedicated to fostering unity, preserving our rich Sindhi traditions, and supporting the well-being of the Sindhi community in Gwalior. The Sindhu Welfare Society is a vibrant hub where members can connect, share, celebrate our culture, participate in events, and support one another. Explore our initiatives, view upcoming events, browse our photo galleries, and find out how you can be a part of our growing family.
+                        Dedicated to fostering unity, preserving our rich Sindhi traditions, and supporting the
+                        well-being of the Sindhi community in Gwalior. The Sindhu Welfare Society is a vibrant hub where
+                        members can connect, share, celebrate our culture, participate in events, and support one
+                        another. Explore our initiatives, view upcoming events, browse our photo galleries, and find out
+                        how you can be a part of our growing family.
                     </p>
                     <a href="" class="align-self-start btn btn-secondary py-3 px-5">Explore Events</a>
                 </div>

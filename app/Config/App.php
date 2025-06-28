@@ -31,6 +31,14 @@ class App extends BaseConfig
 
     public string $twitter = 'https://twitter.com/sindhuwelfare';
 
+    public string $founderPrefix = "Late Dada Shri";
+
+    public string $founderName = "Shrichand Valecha Ji";
+
+    public string $founderDOB = "1942";
+
+    public string $founderDOE = "2025";
+
     /**
      * Allowed Hostnames in the Site URL other than the hostname in the baseURL.
      * If you want to accept multiple Hostnames, set this.

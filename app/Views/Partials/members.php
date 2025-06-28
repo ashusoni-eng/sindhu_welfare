@@ -24,7 +24,7 @@
                         ?>
                         <tr>
                             <td><?= $i + 1 ?></td>
-                            <td class="<?= $nameColorClass ?>"><?= $member['name'] ?><?= ! empty($post) ? ' (' . $post . ')' : '' ?></td>
+                            <td class="fw-bold <?= $nameColorClass ?>"><?= $member['name'] ?><?= ! empty($post) ? ' (' . $post . ')' : '' ?></td>
                             <td><?= $member['office_name'] ?? '--' ?></td>
                             <td>
                                 <a class="btn btn-primary btn-sm" href="<?= base_url('members/single/' . $member['id']) ?>">View</a>
