@@ -22,7 +22,7 @@
                                     Unity, Culture, Service, Devotion
                                 </h1>
                                 <p class="fs-5 text-body ">
-                                    Preserving Sindhi culture and serving the community with devotion.
+                                    Preserving and serving the community with devotion.
                                 </p>
                             </div>
                         </div>
