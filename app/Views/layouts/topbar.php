@@ -4,7 +4,7 @@
           <div class="col-7 px-1 text-start">              
               <div class="h-100 d-inline-flex align-items-center me-4">
                   <small class="far fa-user me-2"></small>
-                  <small>Coordinated by Vikas Dawani</small>
+                  <small>Coordinated by Mr. Vikas Dawani</small>
               </div>              
           </div>
           <div class="col-5 px-5 text-end">
