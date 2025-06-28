@@ -5,7 +5,7 @@
 
 <!-- Carousel Start -->
 <div class="container-fluid p-0 mb-5 wow fadeIn" data-wow-delay="0.1s">
-    <div id="header-carousel" class="carousel slide" data-bs-ride="">
+    <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item ">
                 <!-- <img class="w-100 homeImg" src="/assets/img/home3.jpg" alt="Image" />           -->
@@ -26,10 +26,10 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="founder">
+                        <div class="founder fw-bold">
                             <h5><?= config('App')->founderPrefix ?></h5>
                             <h5><?= config('App')->founderName ?></h5>
-                            <p class="fs-6 text-body ">
+                            <p class="fs-6 text-primary ">
                                 Founder Chairman (<?= config('App')->founderDOB ?> – <?= config('App')->founderDOE ?>)<br>
                                 In Loving Memory
                             </p>
@@ -56,10 +56,10 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="founder">
+                        <div class="founder fw-bold">
                             <h5><?= config('App')->founderPrefix ?></h5>
                             <h5><?= config('App')->founderName ?></h5>
-                            <p class="fs-6 text-body ">
+                            <p class="fs-6 text-primary ">
                                 Founder Chairman (<?= config('App')->founderDOB ?> – <?= config('App')->founderDOE ?>)<br>
                                 In Loving Memory
                             </p>
