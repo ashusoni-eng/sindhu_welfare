@@ -19,11 +19,11 @@ class App extends BaseConfig
 
     public string $name = 'Sindhu Welfare Society';
 
-    public string $email = 'info@sindhuwelfare.com';
+    public string $email = 'sindhuwelfaresociety1984@gmail.com';
 
-    public string $address = 'Jinsi walo ka bada, Gwalior';
+    public string $address = 'Shiv Market, Near Maharaj Bada, Khasgi Bazar, Gwalior';
 
-    public string $phone = '1234567890';
+    public string $phone = '9425116156';
 
     public string $fb = 'https://www.facebook.com/sindhuwelfare';
 

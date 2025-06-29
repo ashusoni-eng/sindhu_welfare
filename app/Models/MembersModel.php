@@ -42,7 +42,7 @@ class MembersModel extends Model
         $builder = $this->db->table($this->table);
 
         return $builder
-            ->whereNotIn('member_type', ['member', 'working committee', 'former president'])
+            ->whereNotIn('member_type', ['member', 'working committee', 'past president'])
             ->orderBy("FIELD(member_type, 'president', 'joint president', 'vice president', 'secretary',  'joint secretary', 'treasurer')", '', false)
             ->get()
             ->getResultArray();
@@ -53,7 +53,7 @@ class MembersModel extends Model
         $builder = $this->db->table($this->table);
 
         return $builder
-            ->where('member_type', 'former president')
+            ->where('member_type', 'past president')
             ->orderBy('name', 'ASC')
             ->get()
             ->getResultArray();
