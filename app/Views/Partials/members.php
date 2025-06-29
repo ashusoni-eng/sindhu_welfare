@@ -6,7 +6,7 @@
         </div>
         <div class="row g-4 table-responsive">
 
-        <table class="table table-striped table-hover table-bordered">
+        <table class="table table-striped table-hover table-bordered" id="membersTable">
             <thead class="bg-primary text-white">
                 <tr>
                     <th>SN</th>
@@ -17,14 +17,19 @@
             </thead>
             <tbody>
                 <?php if (! empty($members)): ?>
-                    <?php foreach ($members as $i => $member): ?>                    
+                    <?php foreach ($members as $i => $member): ?>  
                         <?php
-                            $nameColorClass = $member['member_type'] != 'member' && $member['member_type'] ? 'text-primary' : '';    
+                            // $nameColorClass = $member['member_type'] != 'member' && $member['member_type'] ? 'text-primary' : '';
+                          $nameColorClass = ($member['member_type'] == 'member') 
+                            ? '' 
+                            : (($member['member_type'] == 'working committee') ? 'text-dark' : 'text-primary');
+
+                              
                             $post = $member['member_type'] != 'member' && $member['member_type'] != 'working committee' ? ucwords($member['member_type']) : '';
                         ?>
                         <tr>
                             <td><?= $i + 1 ?></td>
-                            <td class="fw-bold <?= $nameColorClass ?>"><?= $member['name'] ?><?= ! empty($post) ? ' (' . $post . ')' : '' ?></td>
+                            <td class="fw-bold <?= $nameColorClass ?>">Mr. <?= $member['name'] ?><?= ! empty($post) ? ' (' . $post . ')' : '' ?></td>
                             <td><?= $member['office_name'] ?? '--' ?></td>
                             <td>
                                 <a class="btn btn-primary btn-sm" href="<?= base_url('members/single/' . $member['id']) ?>">View</a>

@@ -16,9 +16,9 @@
         <div class="navbar-nav  bg-light rounded pe-4 py-3 py-lg-0">
             <a href="<?= base_url('/') ?>" class="nav-item nav-link <?= $current === '' ? 'active' : '' ?>">Home</a>
             <a href="<?= base_url('/members/dice-and-working-committee') ?>" class="nav-item nav-link <?= $current === 'members/dice-and-working-committee' ? 'active' : '' ?>">Dice & Working Committee</a>
-            <a href="<?= base_url('gallery') ?>" class="nav-item nav-link <?= $current === 'gallery' ? 'active' : '' ?>">Gallery</a>
             <a href="<?= base_url('members/all') ?>" class="nav-item nav-link <?= $current === 'members/all' ? 'active' : '' ?>">Members</a>
-            <a href="<?= base_url('events') ?>" class="nav-item nav-link <?= $current === 'events' ? 'active' : '' ?>">Events</a>
+            <a href="<?= base_url('gallery') ?>" class="nav-item nav-link <?= $current === 'gallery' ? 'active' : '' ?>">Gallery</a>
+            <a href="<?= base_url('events') ?>" class="nav-item nav-link <?= $current === 'events' ? 'active' : '' ?>">Upcoming Events</a>
             <a href="<?= base_url('contact') ?>" class="nav-item nav-link <?= $current === 'contact' ? 'active' : '' ?>">Contact Us</a>
         </div>
     </div>    

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title><?php echo $title ?></title>
+    <title><?php echo $title; ?></title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta content="" name="keywords" />
     <meta content="" name="description" />
@@ -32,13 +32,17 @@
 
     <!-- Template Stylesheet -->
     <link href="/assets/css/style.css?v6" rel="stylesheet" />
+
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+
 </head>
 
 <body>
 
     <?php echo $this->include('layouts/header'); ?>
-<?php echo $this->renderSection('content'); ?>
-<?php echo $this->include('layouts/footer'); ?>
+    <?php echo $this->renderSection('content'); ?>
+    <?php echo $this->include('layouts/footer'); ?>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -51,6 +55,28 @@
 
     <!-- Template Javascript -->
     <script src="/assets/js/main.js"></script>
+
+    <!-- jQuery (required by DataTables) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- DataTables JS -->
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#membersTable').DataTable({
+                paging: false,
+                info: false,
+                lengthChange: false,
+                searching: true,
+                initComplete: function() {
+                    // Set custom placeholder
+                    $('.dataTables_filter input').attr('placeholder', 'Search Member...');
+                    $('.dataTables_filter input').addClass('form-control');
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

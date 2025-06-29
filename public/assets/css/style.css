@@ -855,3 +855,24 @@ i {
     font-size: 0.8rem;
     margin: 0;
 }
+
+.dataTables_filter {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.dataTables_filter label {
+    display: block;
+    width: 100%;
+    font-weight: normal;
+    font-size: 0; /* Hide the "Search:" text label */
+}
+
+.dataTables_filter input {
+    width: 100% !important;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
