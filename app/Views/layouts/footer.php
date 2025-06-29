@@ -8,11 +8,12 @@
                         <img class="img-fluid me-3 footerLogo" src="/assets/img/logo.png" alt="" />
                     </div>
                     <div>
-                      Sindhu Welfare Society
+                        Sindhu Welfare Society
                     </div>
                 </h5>
                 <p>
-                   Sindhu Welfare Society, Gwalior is dedicated to preserving cultural heritage, promoting spiritual values, and supporting community well-being.
+                    Sindhu Welfare Society, Gwalior is dedicated to preserving cultural heritage, promoting spiritual
+                    values, and supporting community well-being.
                 </p>
                 <div class="d-flex pt-2">
                     <a class="btn btn-square me-1" href=""><i class="fab fa-twitter"></i></a>
@@ -31,12 +32,15 @@
             </div>
             <div class="col-lg-3 col-md-6">
                 <h5 class="text-light mb-4">Quick Links</h5>
-                <a class="btn btn-link" href="">About Us</a>
-                <a class="btn btn-link" href="">Contact Us</a>
-                <a class="btn btn-link" href="">Our Services</a>
-                <a class="btn btn-link" href="">Terms & Condition</a>
-                <a class="btn btn-link" href="">Support</a>
+                <a class="btn btn-link" href="<?= base_url('/') ?>">Home</a>
+                <a class="btn btn-link" href="<?= base_url('/members/dice-and-working-committee') ?>">Dice & Working
+                    Committee</a>
+                <a class="btn btn-link" href="<?= base_url('members/all') ?>">Members</a>
+                <a class="btn btn-link" href="<?= base_url('gallery') ?>">Gallery</a>
+                <a class="btn btn-link" href="<?= base_url('events') ?>">Upcoming Events</a>
+                <a class="btn btn-link" href="<?= base_url('contact') ?>">Contact Us</a>
             </div>
+
             <div class="col-lg-3 col-md-6">
                 <h5 class="text-light mb-4">Newsletter</h5>
                 <p>Subscribe our newsletter to get latest events and news</p>
