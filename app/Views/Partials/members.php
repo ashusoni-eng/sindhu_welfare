@@ -26,11 +26,13 @@
 
                               
                             $post = $member['member_type'] != 'member' && $member['member_type'] != 'working committee' ? ucwords($member['member_type']) : '';
+
+                            $post = $member['member_type'] == 'member' && $member['member_type'] != 'working committee' ? ucwords($member['member_type']) : '';
                         ?>
                         <tr>
                             <td><?= $i + 1 ?></td>
                             <td class="fw-bold <?= $nameColorClass ?>">Mr. <?= $member['name'] ?><?= ! empty($post) ? ' (' . $post . ')' : '' ?></td>
-                            <td><?= $member['office_name'] ?? '--' ?></td>
+                            <td class="fw-bold <?= $nameColorClass ?>"><?= $member['office_name'] ?? '--' ?></td>
                             <td>
                                 <a class="btn btn-primary btn-sm" href="<?= base_url('members/single/' . $member['id']) ?>">View</a>
                             </td>
