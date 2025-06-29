@@ -33,7 +33,7 @@
                         </div>
                         <div class="col-sm-6">
                             <h1 class="display-5" data-toggle="counter-up">28</h1>
-                            <p class="fs-5 text-primary">Wokring Committee Members</p>
+                            <p class="fs-5 text-primary">Working Committee Members</p>
                         </div>
                     </div>
                 </div>
