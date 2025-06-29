@@ -6,7 +6,7 @@
         </div>
         <div class="row g-4 table-responsive">
 
-        <table class="table table-striped table-hover table-bordered" id="membersTable">
+        <!-- <table class="table table-striped table-hover table-bordered" id="membersTable">
             <thead class="bg-primary text-white">
                 <tr>
                     <th>SN</th>
@@ -21,21 +21,7 @@
                         <?php
                           $nameColorClass = ($member['member_type'] == 'member') 
                             ? '' 
-                            : (($member['member_type'] == 'working committee') ? 'textwc' : 'text-primary');
-
-                              
-                            // $post = $member['member_type'] != 'member' && $member['member_type'] != 'working committee' ? ucwords($member['member_type']) : '';
-
-                            
-                            //    $post = '';
-
-                            // if($post['member_type'] == 'member') {
-                            //     $post = '';
-                            // }else if($post['member_type'] == 'working committee') {
-                            //     $post = 'WC';
-                            // }else {
-                            //     $post = $member['member_type'];
-                            // }
+                            : (($member['member_type'] == 'working committee') ? 'textwc' : 'text-primary');                          
 
                             $post = $member['member_type'] == 'member'
                              ? ''
@@ -52,7 +38,14 @@
                     <?php endforeach; ?>
                 <?php endif; ?>
             </tbody>
-        </table>            
+        </table>             -->
+
+
+            <?php if (!empty($members)): ?>
+                <?php foreach ($members as $i => $member): ?>
+                    <?= view('Partials/member_card', ['member' => $member]) ?>
+                <?php endforeach; ?>
+            <?php endif; ?>
         </div>
     </div>
 </div>
