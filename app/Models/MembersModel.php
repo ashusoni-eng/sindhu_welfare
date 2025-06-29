@@ -42,8 +42,19 @@ class MembersModel extends Model
         $builder = $this->db->table($this->table);
 
         return $builder
-            ->whereNotIn('member_type', ['member', 'working committee'])
-            ->orderBy("FIELD(member_type, 'president', 'vice president', 'joint president', 'secretary',  'joint secretary', 'former president',  'treasurer')", '', false)
+            ->whereNotIn('member_type', ['member', 'working committee', 'former president'])
+            ->orderBy("FIELD(member_type, 'president', 'joint president', 'vice president', 'secretary',  'joint secretary', 'treasurer')", '', false)
+            ->get()
+            ->getResultArray();
+    }
+
+    public function get_former_president()
+    {
+        $builder = $this->db->table($this->table);
+
+        return $builder
+            ->where('member_type', 'former president')
+            ->orderBy('name', 'ASC')
             ->get()
             ->getResultArray();
     }

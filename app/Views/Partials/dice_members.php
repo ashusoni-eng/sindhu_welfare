@@ -6,17 +6,10 @@
         </div>
         <div class="row g-4">
 
-            <?php if (!empty($members)): ?>
+            <?php if (!empty($members)): ?>        
 
             <div class="row g-4 president">
-                <?php if (isset($members[0])): ?>
-                <?= view('Partials/member_card', ['member' => $members[0]]) ?>
-                <?php endif; ?>
-            </div>
-
-
-            <div class="row g-4 president">
-                <?php for ($i = 1; $i <= 2 && isset($members[$i]); $i++): ?>
+                <?php for ($i = 0; $i <= 2 && isset($members[$i]); $i++): ?>
                 <?= view('Partials/member_card', ['member' => $members[$i]]) ?>
                 <?php endfor; ?>
             </div>

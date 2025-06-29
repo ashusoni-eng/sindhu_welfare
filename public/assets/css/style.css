@@ -14,6 +14,7 @@
     --light: #F6F7FC;
     --dark: #15233C;
     --overlay-color: rgba(175, 64, 0, 0.9);
+    --secondary-rgb: 190, 81, 17;
 }
 
 .back-to-top {
@@ -703,7 +704,7 @@ i {
     width: 100%;
     height: auto;
     /* Adjust height based on content */
-    background: rgba(var(--primary-color-rgb, 40, 167, 69), 0.85);
+    background: rgba(var(--secondary-rgb), 0.85);
     /* Use RGB for opacity */
     color: white;
     display: flex;
@@ -824,3 +825,32 @@ i {
 }
 
 /* Gallry CSS End */
+
+
+.member-card-sm img {
+    height: 350px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    width: 60%;    
+}
+
+.member-card-sm .team-item {
+    padding: 10px;
+    font-size: 0.9rem;
+}
+
+.member-card-sm .team-text,
+.member-card-sm .text-center {
+    padding: 0.5rem;
+}
+
+.member-card-sm h5 {
+    font-size: 1rem;
+    margin: 0.3rem 0;
+}
+
+.member-card-sm p,
+.member-card-sm span {
+    font-size: 0.8rem;
+    margin: 0;
+}

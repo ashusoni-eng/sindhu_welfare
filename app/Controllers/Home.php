@@ -14,6 +14,7 @@ class Home extends BaseController
 
         $memberModel = new \App\Models\MembersModel();
         $data['members'] = $memberModel->get_dice();
+        $data['former_presidents'] = $memberModel->get_former_president();
         return view('Pages/index', $data);
     }
 
