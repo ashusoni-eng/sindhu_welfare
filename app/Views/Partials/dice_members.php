@@ -9,13 +9,13 @@
             <?php if (!empty($members)): ?>        
 
             <div class="row g-4 president">
-                <?php for ($i = 0; $i <= 2 && isset($members[$i]); $i++): ?>
+                <?php for ($i = 0; $i <= 0 && isset($members[$i]); $i++): ?>
                 <?= view('Partials/member_card', ['member' => $members[$i]]) ?>
                 <?php endfor; ?>
             </div>
 
             <div class="row g-4 president">
-                <?php for ($i = 3; $i <= 7 && isset($members[$i]); $i++): ?>
+                <?php for ($i = 1; $i <= 7 && isset($members[$i]); $i++): ?>
                 <?= view('Partials/member_card', ['member' => $members[$i]]) ?>
                 <?php endfor; ?>
             </div>

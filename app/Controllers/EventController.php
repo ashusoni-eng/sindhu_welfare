@@ -11,7 +11,7 @@ class EventController extends BaseController
         $title = 'Events | ' . config('App')->name;
         $model = new EventsModel();
 
-        $data['events'] = $model->orderBy('id', 'DESC')->findAll();
+        $data['events'] = $model->orderBy('id', 'ASC')->findAll();
 
         $data['title'] = $title;
 

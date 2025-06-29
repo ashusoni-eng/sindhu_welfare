@@ -823,6 +823,11 @@ i {
     .headingMain{
         font-size: 1rem;
     }
+
+    .member-card-sm img {
+        height: 210px !important;        
+        width: 100% !important;    
+    }
 }
 
 /* Gallry CSS End */
@@ -875,4 +880,13 @@ i {
     font-size: 1rem;
     border: 1px solid #ccc;
     border-radius: 6px;
+}
+
+.textwc{
+    color: var(--secondary);
+}
+
+.email{
+    word-wrap: break-word;
+    width: 90%;
 }

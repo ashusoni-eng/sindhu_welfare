@@ -19,15 +19,27 @@
                 <?php if (! empty($members)): ?>
                     <?php foreach ($members as $i => $member): ?>  
                         <?php
-                            // $nameColorClass = $member['member_type'] != 'member' && $member['member_type'] ? 'text-primary' : '';
                           $nameColorClass = ($member['member_type'] == 'member') 
                             ? '' 
-                            : (($member['member_type'] == 'working committee') ? 'text-dark' : 'text-primary');
+                            : (($member['member_type'] == 'working committee') ? 'textwc' : 'text-primary');
 
                               
-                            $post = $member['member_type'] != 'member' && $member['member_type'] != 'working committee' ? ucwords($member['member_type']) : '';
+                            // $post = $member['member_type'] != 'member' && $member['member_type'] != 'working committee' ? ucwords($member['member_type']) : '';
 
-                            $post = $member['member_type'] == 'member' && $member['member_type'] != 'working committee' ? ucwords($member['member_type']) : '';
+                            
+                            //    $post = '';
+
+                            // if($post['member_type'] == 'member') {
+                            //     $post = '';
+                            // }else if($post['member_type'] == 'working committee') {
+                            //     $post = 'WC';
+                            // }else {
+                            //     $post = $member['member_type'];
+                            // }
+
+                            $post = $member['member_type'] == 'member'
+                             ? ''
+                              :  (($member['member_type'] == 'working committee') ? 'WC' : ucwords($member['member_type']));
                         ?>
                         <tr>
                             <td><?= $i + 1 ?></td>

@@ -11,9 +11,9 @@
              <h4 class="event-title"><?= esc($title); ?></h4>
              <p class="event-short-description"><?= esc($description); ?></p>
              <div class="event-info">
-                 <p class="event-date-time"><strong>Date:</strong><?= esc($date); ?></p>
-                 <p class="event-date-time"><strong>Time:</strong> <?= esc($time); ?> onwards</p>
-                 <p class="event-location"><strong>Venue:</strong> <?= esc($location); ?></p>
+                 <p class="event-date-time"><strong>Date:</strong><?= $date ? date('d-M-Y', strtotime($date)) : '--'?></p>
+                 <p class="event-date-time"><strong>Time:</strong> <?= esc($time) ?? '--' ?> </p>
+                 <p class="event-location"><strong>Venue:</strong> <?= esc($location) ?? '--' ?></p>
              </div>
          </div>
      </div>

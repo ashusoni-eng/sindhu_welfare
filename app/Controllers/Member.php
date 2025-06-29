@@ -22,7 +22,8 @@ class Member extends BaseController
         $model = new MembersModel();
 
         $data['members'] = $model->where('member_type !=', 'member')->where('member_type !=', 'past president')
-            ->orderBy("FIELD(member_type, 'president', 'vice president', 'joint president', 'secretary',  'joint secretary', 'former president',  'treasurer' ,'working committee')", '', false)->findAll();
+        ->orWhere('id', 12)
+            ->orderBy("FIELD(member_type, 'president', 'vice president', 'joint president', 'secretary',  'joint secretary', 'past president',  'treasurer' ,'working committee')", '', false)->findAll();
 
         $data['title'] = 'Dice & Working Committee';
 

@@ -12,10 +12,10 @@
                     <div class="d-flex align-items-center bg-primary rounded p-3">
                         <img class="flex-shrink-0 rounded-circle me-3" src="/assets/img/contact.jpg" style="width:6%"
                             alt="" />
-                        <h5 class="text-white mb-0">
+                        <h6 class="text-white mb-0 email">
                             Email Us:
                             <?php echo config('App')->email; ?>
-                        </h5>
+                        </h6>
                     </div>
                 </div>
             </div>

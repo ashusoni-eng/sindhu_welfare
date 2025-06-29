@@ -27,7 +27,7 @@ class App extends BaseConfig
 
     public string $fb = 'https://www.facebook.com/sindhuwelfare';
 
-    public string $insta = 'https://www.instagram.com/sindhuwelfare';
+    public string $insta = 'https://www.instagram.com/sindhuwelfaresociety_gwalior';
 
     public string $twitter = 'https://twitter.com/sindhuwelfare';
 

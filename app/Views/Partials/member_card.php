@@ -3,7 +3,7 @@
     $photoPath  = FCPATH . 'members/' . $photo;
     $finalPhoto = (is_file($photoPath) && ! empty($photo)) ? $photo : 'default.png';
 ?>
-<div class="col-lg-4 col-md-6 wow fadeInUp member-card-sm text-center" data-wow-delay="0.1s">
+<div class="col-lg-4 col-6 wow fadeInUp member-card-sm text-center" data-wow-delay="0.1s">
     <a href="<?php echo base_url('member/profile/' . $id); ?>">
         <div class="team-item rounded">
             <img class="img-fluid" src="/members/<?php echo esc($finalPhoto) ?>" alt="" />
