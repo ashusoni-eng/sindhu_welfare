@@ -11,15 +11,28 @@ class GalleryController extends BaseController
         $title = 'Gallery | ' . config('App')->name;
         $model = new GalleryModel();
 
-        $allGallery = $model->orderBy('year', 'DESC')->findAll();
+        $allGallery = $model->orderBy('date', 'DESC')->findAll(); // sort by date, not year
 
         $grouped = [];
+
         foreach ($allGallery as $item) {
-            $grouped[$item['year']][] = $item;
+            $date = new \DateTime($item['date']);
+            $year = (int) $date->format('Y');
+            $month = (int) $date->format('m');
+
+            // Determine session based on July-June cutoff
+            if ($month >= 7) {
+                // From July to Dec → session = currentYear - nextYear
+                $sessionKey = $year . '-' . substr($year + 1, -2);
+            } else {
+                // From Jan to June → session = previousYear - currentYear
+                $sessionKey = $year - 1 . '-' . substr($year, -2);
+            }
+
+            $grouped[$sessionKey][] = $item;
         }
 
         $data['gallery'] = $grouped;
-
         $data['title'] = $title;
 
         return view('Pages/gallery', $data);
