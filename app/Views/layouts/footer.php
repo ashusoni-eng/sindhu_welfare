@@ -41,15 +41,27 @@
                 <a class="btn btn-link" href="<?= base_url('contact') ?>">Contact Us</a>
             </div>
 
-            <div class="col-lg-3 col-md-6">
-                <h5 class="text-light mb-4">Newsletter</h5>
+            <div class="col-lg-3 col-md-6">`
+                <h5 class="text-light mb-4">Newsletter</h5>`
                 <p>Subscribe our newsletter to get latest events and news</p>
                 <div class="position-relative mx-auto" style="max-width: 400px">
-                    <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text"
-                        placeholder="Your email" />
-                    <button type="button" class="btn btn-secondary py-2 position-absolute top-0 end-0 mt-2 me-2">
-                        SignUp
-                    </button>
+                    <form action="<?= base_url('email/subscribe') ?>" id="email-form">
+                        <input name="email" class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="email"
+                            placeholder="Your email" required />
+                        <button type="submit" id="sendButton"
+                            class="btn btn-secondary py-2 position-absolute top-0 end-0 mt-2 me-2">
+                            SignUp
+                            <span class="spinner-border spinner-border-sm ms-2 d-none" role="status" aria-hidden="true"
+                                id="btnSpinner"></span>
+                        </button>
+                    </form>
+                    <div class="alert alert-danger mt-2 d-none" role="alert" id="error1">
+                        Something went wrong from our side, Please try again!
+                    </div>
+                    <div class="alert alert-success mt-2 d-none" role="alert" id="success1">
+                        Thank you for subscribe.
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -71,3 +83,39 @@
 
 <!-- Back to Top -->
 <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#email-form').on('submit', function(e) {
+            e.preventDefault();
+
+            $('#sendButton').prop('disabled', true);
+            $('#btnSpinner').removeClass('d-none');
+
+            $.ajax({
+                url: $(this).attr('action'),
+                type: "POST",
+                data: $(this).serialize(),
+                success: function(res) {
+                    $('#btnSpinner').addClass('d-none');
+                    $('#sendButton').prop('disabled', false);
+
+                    if (res.status) {
+                        $("#error1").addClass('d-none');
+                        $("#success1").removeClass('d-none');
+                        $('#email-form')[0].reset();
+                    } else {
+                        $("#success1").addClass('d-none');
+                        $("#error1").removeClass('d-none');
+                    }
+                },
+                error: function() {
+                    $('#btnSpinner').addClass('d-none');
+                    $('#sendButton').prop('disabled', false);
+                    $("#success1").addClass('d-none');
+                    $("#error1").removeClass('d-none');
+                }
+            });
+        });
+    });
+</script>

@@ -13,7 +13,7 @@
                         another. Explore our initiatives, view upcoming events, browse our photo galleries, and find out
                         how you can be a part of our growing family.
                     </p>
-                    <a href="" class="align-self-start btn btn-secondary py-3 px-5">Explore Events</a>
+                    <a href="<?= base_url('events') ?>" class="align-self-start btn btn-secondary py-3 px-5">Explore Upcoming Events</a>
                 </div>
             </div>
             <div class="col-lg-6 facts-counter wow fadeIn" data-wow-delay="0.5s">

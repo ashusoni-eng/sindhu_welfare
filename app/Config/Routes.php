@@ -18,9 +18,13 @@ $routes->get('/members/all', 'Member::index');
 $routes->get('/members/dice-and-working-committee', 'Member::working_committee');
 $routes->get('/members/single/(:segment)', 'Member::single/$1');
 
-$routes->get('/import', 'CsvImportController::index');
-$routes->post('csv-import', 'CsvImportController::import');
+// $routes->get('/import', 'CsvImportController::index');
+// $routes->post('csv-import', 'CsvImportController::import');
+
+$routes->post('/contact/send', 'Home::contact_form');
+$routes->post('/email/subscribe', 'Home::email_subscription');
 
 $routes->set404Override(function () {
     echo view('Pages/404', ['title' => '404 Error']);
 });
+

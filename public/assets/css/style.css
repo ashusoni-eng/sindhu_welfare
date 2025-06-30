@@ -11,6 +11,7 @@
 :root {
     --primary: #953700;
     --secondary: #be5111;
+    --secondary-lite: #fa7861;
     --light: #F6F7FC;
     --dark: #15233C;
     --overlay-color: rgba(175, 64, 0, 0.9);
@@ -876,10 +877,6 @@ i {
     font-size: 1rem;
     border: 1px solid #ccc;
     border-radius: 6px;
-}
-
-.textwc{
-    color: var(--secondary);
 }
 
 .email{

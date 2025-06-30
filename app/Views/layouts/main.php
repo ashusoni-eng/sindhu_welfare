@@ -31,7 +31,7 @@
     <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- Template Stylesheet -->
-    <link href="/assets/css/style.css?v999" rel="stylesheet" />
+    <link href="/assets/css/style.css?v5" rel="stylesheet" />
 
     <!-- DataTables CSS -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
@@ -61,7 +61,7 @@
 
     <!-- DataTables JS -->
     <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
-
+    
     <script>
         $(document).ready(function() {
             $('#membersTable').DataTable({

@@ -9,8 +9,8 @@
           </div>
           <div class="col-4 text-end" style="padding-right:2rem;">
               <div class="h-100 d-inline-flex align-items-center">
-                  <a class="text-white-50 ms-4" href=""><i class="fab fa-facebook-f"></i></a>                  
-                  <a class="text-white-50 ms-4" href=""><i class="fab fa-instagram"></i></a>
+                  <a class="text-white-50 ms-4" href="<?= config('App')->fb; ?>" target="_blank"><i class="fab fa-facebook-f"></i></a>                  
+                  <a class="text-white-50 ms-4" href="<?= config('App')->insta; ?>" target="_blank"><i class="fab fa-instagram"></i></a>
 
                   <a class="text-white-50 ms-4" href="javascript:void(0);" id="themeToggleBtn" title="Change Colors"><i class="fas fa-palette"></i></a>
               </div>

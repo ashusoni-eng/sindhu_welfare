@@ -61,6 +61,7 @@
 const theme1 = {
   primary: "#953700",
   secondary: "#be5111",
+  secondary_lite: "#e99462",
   light: "#F6F7FC",
   dark: "#15233C",
   overlay_color: "rgba(175, 64, 0, 0.9)",
@@ -69,6 +70,7 @@ const theme1 = {
 const theme2 = {
   primary: "#015FC9",
   secondary: "#0DD3F1",
+  secondary_lite: "#0DD3F1",
   light: "#F6F7FC",
   dark: "#15233C",
   overlay_color: "rgba(1, 95, 201, 0.9)",
@@ -79,6 +81,7 @@ function applyTheme(theme) {
   const root = document.documentElement;
   root.style.setProperty("--primary", theme.primary);
   root.style.setProperty("--secondary", theme.secondary);
+  root.style.setProperty("--secondary-lite", theme.secondary_lite);
   root.style.setProperty("--light", theme.light);
   root.style.setProperty("--dark", theme.dark);
   root.style.setProperty("--overlay-color", theme.overlay_color);

@@ -7,13 +7,13 @@ class Home extends BaseController
 {
     public function index(): string
     {
-        $title = config('App')->name;
-        $data['title'] = $title;
-        $eventModel = new \App\Models\EventsModel();
+        $title          = config('App')->name;
+        $data['title']  = $title;
+        $eventModel     = new \App\Models\EventsModel();
         $data['events'] = $eventModel->get_latest();
 
-        $memberModel = new \App\Models\MembersModel();
-        $data['members'] = $memberModel->get_dice();
+        $memberModel               = new \App\Models\MembersModel();
+        $data['members']           = $memberModel->get_dice();
         $data['former_presidents'] = $memberModel->get_former_president();
         return view('Pages/index', $data);
     }
@@ -35,5 +35,47 @@ class Home extends BaseController
         $data['title'] = $title;
 
         return view('Pages/contact', $data);
-    }    
+    }
+
+    public function contact_form()
+    {
+        $name    = $this->request->getPost('name');
+        $mobile  = $this->request->getPost('mobile');
+        $email   = $this->request->getPost('email');
+        $message = $this->request->getPost('message');
+
+        $formatted      = "A New Enquiry On Sindhu Welfare Society\nName: $name\nMobile: $mobile\nEmail: $email\nMessage: $message\n\nThanks";
+        $encodedMessage = urlencode($formatted); // important: encode full message
+
+        // Load from .env
+        $apiUrl   = getenv('WHATSAPP_API_URL');
+        $apiKey   = getenv('WHATSAPP_API_KEY');
+        $receiver = getenv('WHATSAPP_RECEIVER');
+
+        // Full GET URL
+        $finalUrl = "$apiUrl?mobile=$receiver&api=$apiKey&message=$encodedMessage";
+
+        $client   = \Config\Services::curlrequest();
+        $response = $client->post($finalUrl);
+
+        if ($response->getStatusCode() === 200) {
+            return $this->response->setJSON(['status' => true, 'message' => 'Message sent.']);
+        } else {
+            return $this->response->setJSON(['status' => false, 'message' => 'Failed to send.']);
+        }
+    }
+
+    public function email_subscription()
+    {
+        $email = $this->request->getPost('email');
+
+        if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            return $this->response->setJSON(['status' => false, 'message' => 'Invalid Email.']);
+        }
+        
+        $model = new \App\Models\EmailSubscriptionModel();
+        $model->insert(['email' => $email]);
+
+        return $this->response->setJSON(['status' => true, 'message' => 'Thank You For Subscribe.']);
+    }
 }
