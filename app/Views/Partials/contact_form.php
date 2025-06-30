@@ -10,7 +10,7 @@
                 </p>
                 <div class="bg-white rounded p-3">
                     <div class="d-flex align-items-center bg-primary rounded p-3">
-                        <img class="flex-shrink-0 rounded-circle me-3" src="/assets/img/contact.jpg" style="width:6%"
+                        <img class="flex-shrink-0 rounded-circle me-3" src="/assets/img/contact.jpg" style="width:10%"
                             alt="" />
                         <h6 class="text-white mb-0 email">
                             Email Us:
