@@ -4,10 +4,10 @@
         <div class="text-center mx-auto" style="max-width: 500px">
             <h1 class="display-6 mb-5">Past Presidents</h1>
         </div>
-        <div class="row g-4">
+        <div class="row g-4" style="margin-left:0">
             <?php if (!empty($former_presidents)): ?>
 
-            <div class="row g-4 president">
+            <div class="row g-4 president" style="margin-left:0">
                 <?php for ($i = 0; $i <= 6 && isset($former_presidents[$i]); $i++): ?>
                 <?= view('Partials/member_card', ['member' => $former_presidents[$i]]) ?>
                 <?php endfor; ?>

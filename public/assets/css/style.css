@@ -123,7 +123,7 @@
 
 @media (max-width: 991.98px) {
     .navbar .navbar-brand img {
-        max-height: 45px;
+        max-height: 50px;
     }
 
     .navbar .navbar-nav {
@@ -570,10 +570,6 @@
     color: #333;
     margin-right: 5px;
     /* Space between label and value */
-}
-
-.navbar .navbar-brand img {
-    max-height: 80px;
 }
 
 .container.facts .facts-text {

@@ -5,7 +5,7 @@
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="position-relative overflow-hidden rounded ps-3 pt-5 h-100" style="min-height: 400px">
                     <img class="position-absolute " src="/assets/img/logo.png" alt=""
-                        style="object-fit: scale-down; width:22rem;" />
+                        style="object-fit: scale-down; width:20rem;" />
                     <!-- <div class="position-absolute top-0 start-0 bg-white rounded pe-3 pb-3"
                         style="width: 200px; height: 200px">
                         <div class="d-flex flex-column justify-content-center text-center bg-primary rounded h-100 p-3">

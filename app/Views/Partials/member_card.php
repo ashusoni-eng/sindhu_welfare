@@ -8,7 +8,7 @@
         <div class="team-item rounded">
             <img class="img-fluid" src="/members/<?php echo esc($finalPhoto) ?>" alt="" />
             <div class="text-center p-4">
-                <h5><?php echo esc($name) ?></h5>
+                <h5>Mr. <?php echo esc($name) ?></h5>
                 <span><?php echo ucfirst(esc($member_type)) ?></span>
             </div>
             <div class="team-text text-center bg-white p-4">
