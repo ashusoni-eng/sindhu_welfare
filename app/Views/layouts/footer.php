@@ -8,11 +8,11 @@
                         <img class="img-fluid me-3 footerLogo" src="/assets/img/logo.png" alt="" />
                     </div>
                     <div>
-                        Sindhu Welfare Society
+                        <?= config('App')->siteName; ?>
                     </div>
                 </h5>
                 <p>
-                    Sindhu Welfare Society, Gwalior is dedicated to preserving cultural heritage, promoting spiritual
+                    <?= config('App')->siteName; ?>, Gwalior is dedicated to preserving cultural heritage, promoting spiritual
                     values, and supporting community well-being.
                 </p>
                 <div class="d-flex pt-2">

@@ -18,6 +18,8 @@ class App extends BaseConfig
     public string $baseURL = 'http://localhost:8080/';
 
     public string $name = 'Sindhu Welfare Society';
+    public string $nameSuffix = '(Reg.) Gwalior';
+    public string $siteName = 'Sindhu Welfare Society (Reg.) Gwalior';
 
     public string $email = 'sindhuwelfaresociety1984@gmail.com';
 

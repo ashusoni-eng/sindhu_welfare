@@ -5,10 +5,10 @@
         <div class="row g-0 mx-lg-0">
             <div class="col-lg-6 facts-text wow fadeIn" data-wow-delay="0.1s">
                 <div class="h-100 px-4 ps-lg-0">
-                    <h1 class="text-white mb-4">Welcome to the Sindhu Welfare Society, Gwalior</h1>
+                    <h1 class="text-white mb-4">Welcome to the <?= config('App')->siteName; ?>, Gwalior</h1>
                     <p class="text-light mb-5">
                         Dedicated to fostering unity, preserving our rich Sindhi traditions, and supporting the
-                        well-being of the Sindhi community in Gwalior. The Sindhu Welfare Society is a vibrant hub where
+                        well-being of the Sindhi community in Gwalior. The <?= config('App')->siteName; ?> is a vibrant hub where
                         members can connect, share, celebrate our culture, participate in events, and support one
                         another. Explore our initiatives, view upcoming events, browse our photo galleries, and find out
                         how you can be a part of our growing family.

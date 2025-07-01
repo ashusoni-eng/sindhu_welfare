@@ -44,7 +44,7 @@ class Home extends BaseController
         $email   = $this->request->getPost('email');
         $message = $this->request->getPost('message');
 
-        $formatted      = "A New Enquiry On Sindhu Welfare Society\nName: $name\nMobile: $mobile\nEmail: $email\nMessage: $message\n\nThanks";
+        $formatted      = "A New Enquiry On <?= config('App')->siteName; ?>\nName: $name\nMobile: $mobile\nEmail: $email\nMessage: $message\n\nThanks";
         $encodedMessage = urlencode($formatted); // important: encode full message
 
         // Load from .env

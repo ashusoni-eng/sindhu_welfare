@@ -3,10 +3,10 @@
         <div class="row g-5">
             <div class="col-lg-6 wow fadeIn" data-wow-delay="0.3s">
                 <h1 class="display-6 text-white mb-5">
-                    Questions? Get in Touch with Sindhu Welfare Society!
+                    Questions? Get in Touch with <?= config('App')->siteName; ?>!
                 </h1>
                 <p class="text-white mb-5">
-                    The Sindhu Welfare Society is your dedicated point of contact in Gwalior for all things related to
+                    The <?= config('App')->siteName; ?> is your dedicated point of contact in Gwalior for all things related to
                     our vibrant Sindhi community. From cultural events and celebrations to welfare initiatives, youth
                     programs, and membership information, we're here to connect and support you. Please get in touch
                     using the form or call us directly with your queries or suggestions.

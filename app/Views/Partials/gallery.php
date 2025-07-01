@@ -7,7 +7,7 @@
 </section>
 
 <section class="container my-5">
-    <h2 class="text-center mb-5 gallery-main-heading">Our Work in Pictures</h2>
+    <h2 class="text-center mb-5 gallery-main-heading border-bottom pb-3  border-3">Captured Moments</h2>
 
     <?php if (!empty($gallery)): ?>
         <?php foreach ($gallery as $year => $photos): ?>
@@ -23,6 +23,12 @@
     <?php else: ?>
         <p>No gallery items found.</p>
     <?php endif; ?>
+
+
+
+    <h2 class="text-center mb-5 gallery-main-heading border-bottom pb-3  border-3">Working Committee Meetings</h2>
+    
+    <div class="text-center">No Working Committee Meetings Found</div>
 
 </section>
 

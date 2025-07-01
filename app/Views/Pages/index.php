@@ -37,7 +37,7 @@
                 </div>
             </div>
 
-            <!-- <div class="carousel-item ">
+            <div class="carousel-item ">
                 <picture>
                     <source srcset="/assets/img/home1.jpg" media="(max-width: 600px)">
                     <img src="/assets/img/home3.jpg" alt="Description of image" class="w-100 homeImg">
@@ -66,18 +66,7 @@
 
                     </div>
                 </div>
-            </div> -->
-
-            <?php
-                for($i = 1; $i < 6; $i++) {
-                    echo '<div class="carousel-item">
-                            <picture>
-                                <source srcset="/assets/img/dada'.$i.'.jpeg" media="(max-width: 600px)">
-                                <img src="/assets/img/dada'.$i.'.jpeg" alt="Description of image" class="w-100 homeImg">
-                            </picture>
-                        </div>';
-                }
-            ?>
+            </div>          
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
             <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->

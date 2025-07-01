@@ -793,6 +793,15 @@ i {
     color: white;    
 }
 
+
+.headingMain{
+    font-size: 2rem;  
+}
+
+.hiddenOnDesktop{
+    display: none;
+}
+
 /* Responsive adjustments */
 @media (max-width: 767.98px) {
     .hero-gallery-section h1 {
@@ -825,10 +834,16 @@ i {
         height: 210px !important;        
         width: 100% !important;    
     }
+    .hiddenOnMobile{
+        display: none;
+    }
+
+    .hiddenOnDesktop{
+        display: block;
+    }
 }
 
 /* Gallry CSS End */
-
 
 .member-card-sm img {
     height: 350px;
