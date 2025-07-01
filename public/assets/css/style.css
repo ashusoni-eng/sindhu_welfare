@@ -619,7 +619,7 @@ i {
 }
 
 .footerLogo {
-    width: 100px;
+    width: 156px;
     height: 90px;
     background-color: wheat;
     border-radius: 50%;
@@ -840,6 +840,9 @@ i {
 
     .hiddenOnDesktop{
         display: block;
+    }
+    .footerLogo {
+        width: 156px;    
     }
 }
 
