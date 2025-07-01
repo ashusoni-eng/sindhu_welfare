@@ -41,8 +41,8 @@
                 <a class="btn btn-link" href="<?= base_url('contact') ?>">Contact Us</a>
             </div>
 
-            <div class="col-lg-3 col-md-6">`
-                <h5 class="text-light mb-4">Newsletter</h5>`
+            <div class="col-lg-3 col-md-6">
+                <h5 class="text-light mb-4">Newsletter</h5>
                 <p>Subscribe our newsletter to get latest events and news</p>
                 <div class="position-relative mx-auto" style="max-width: 400px">
                     <form action="<?= base_url('email/subscribe') ?>" id="email-form">
