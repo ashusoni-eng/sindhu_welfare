@@ -24,7 +24,7 @@
                             <tr>
                                 <td><?= $i++ ?>.</td>
                                 <td>Mr. <?= $member['name'] ?></td>
-                                <td>+91 <?= $member['mobile'] ?></td>
+                                <td><?= $member['mobile'] ?></td>
                             </tr>
                             <?php endforeach; ?>
                         </tbody>
