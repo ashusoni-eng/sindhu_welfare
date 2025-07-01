@@ -23,7 +23,11 @@
                             <?php $i = 1; foreach ($members as $member) : ?>
                             <tr>
                                 <td><?= $i++ ?>.</td>
-                                <td>Mr. <?= $member['name'] ?></td>
+                                <td>Mr. <?= $member['name'] ?> <br class="hiddenOnDesktop">
+                                    <small class="text-primary">
+                                        (<?= ucwords($member['member_type']) ?>
+                                    </small>)
+                                </td>
                                 <td><?= $member['mobile'] ?></td>
                             </tr>
                             <?php endforeach; ?>
