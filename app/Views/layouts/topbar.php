@@ -8,7 +8,7 @@
                         <img class="flex-shrink-0 rounded-circle me-3" src="/assets/img/coordinator.jpg" style="width:2.6rem"
                             alt="" />
                         <span class="text-white hiddenOnMobile">Coordinated by Mr. Vikas Dawani</span>
-                        <span class="text-white hiddenOnDesktop">Coordinated by<br> Mr. Vikas Dawani</span>
+                        <small class="text-white hiddenOnDesktop">Coordinated by<br> Mr. Vikas Dawani</small>
                     </div>                  
               </div>              
           </div>
