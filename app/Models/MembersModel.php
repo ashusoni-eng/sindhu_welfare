@@ -55,7 +55,7 @@ class MembersModel extends Model
 
         return $builder
             ->where('member_type', 'past president')
-            ->orderBy('name', 'ASC')
+            ->orderBy("FIELD(id, 80, 127, 119, 122, 37, 12)", '', false)
             ->get()
             ->getResultArray();
     }

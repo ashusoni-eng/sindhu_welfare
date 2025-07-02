@@ -29,7 +29,11 @@ class GalleryController extends BaseController
                 $sessionKey = $year - 1 . '-' . substr($year, -2);
             }
 
-            $grouped[$sessionKey][] = $item;
+            $type = $item['type'] ?? 'event';
+
+             $grouped[$sessionKey][$type][] = $item;
+
+            // $grouped[$sessionKey][] = $item;
         }
 
         $data['gallery'] = $grouped;

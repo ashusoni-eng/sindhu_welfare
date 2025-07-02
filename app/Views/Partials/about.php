@@ -9,6 +9,7 @@
                 </div>
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                <?php if($contact) : ?>
                 <div>
                     <h2 class="mb-4 text-center">Our Dice Members</h2>
                     <table class="table table-striped table-hover table-bordered">
@@ -34,24 +35,49 @@
                         </tbody>
                     </table>
                 </div>
+                <?php else: ?>
+                    <div class="h-100">
+                        <h1 class="display-6 mb-5">
+                            <?= config('App')->siteName ?> — nurturing traditions with modern compassion.
+                        </h1>
+                        <p class="fs-5 text-primary mb-4">
+                            We are devoted to uplifting society through spirituality, Sindhi cultural preservation, and
+                            compassionate community service.
+                        </p>
+                        <p class="mb-4">
+                            From religious celebrations to social support — we foster a space where Sindhi heritage
+                            flourishes and
+                            every soul feels at home.
+                            <?= config('App')->siteName ?> is a humble effort to unite Sindhi hearts through satsang, seva,
+                            and
+                            sanskar.
+                            More than just a welfare society, we are a spiritual family — honoring our roots, serving those
+                            in need,
+                            and passing forward the timeless values of Sindhi life
+                        </p>
+                    </div>
+                <?php endif; ?>
             </div>
         </div>
-        <div class="h-100">
-            <h1 class="display-6 mb-5">
-                <?= config('App')->siteName; ?> — nurturing traditions with modern compassion.
-            </h1>
-            <p class="fs-5 text-primary mb-4">
-                We are devoted to uplifting society through spirituality, Sindhi cultural preservation, and
-                compassionate community service.
-            </p>
-            <p class="mb-4">
-                From religious celebrations to social support — we foster a space where Sindhi heritage flourishes and
-                every soul feels at home.
-                <?= config('App')->siteName; ?> is a humble effort to unite Sindhi hearts through satsang, seva, and sanskar.
-                More than just a welfare society, we are a spiritual family — honoring our roots, serving those in need,
-                and passing forward the timeless values of Sindhi life
-            </p>
-        </div>
+        <?php if($contact) : ?>
+            <div class="h-100">
+                <h1 class="display-6 mb-5">
+                    <?= config('App')->siteName ?> — nurturing traditions with modern compassion.
+                </h1>
+                <p class="fs-5 text-primary mb-4">
+                    We are devoted to uplifting society through spirituality, Sindhi cultural preservation, and
+                    compassionate community service.
+                </p>
+                <p class="mb-4">
+                    From religious celebrations to social support — we foster a space where Sindhi heritage flourishes and
+                    every soul feels at home.
+                    <?= config('App')->siteName ?> is a humble effort to unite Sindhi hearts through satsang, seva, and
+                    sanskar.
+                    More than just a welfare society, we are a spiritual family — honoring our roots, serving those in need,
+                    and passing forward the timeless values of Sindhi life
+                </p>
+            </div>
+        <?php endif; ?>
     </div>
 </div>
 <!-- About End -->

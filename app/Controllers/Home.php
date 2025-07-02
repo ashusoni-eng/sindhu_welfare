@@ -14,6 +14,7 @@ class Home extends BaseController
 
         $memberModel               = new \App\Models\MembersModel();
         $data['members']           = $memberModel->get_dice();
+        $data['contact'] = false;
         $data['former_presidents'] = $memberModel->get_former_president();
         return view('Pages/index', $data);
     }
@@ -31,8 +32,11 @@ class Home extends BaseController
 
     public function contact(): string
     {
-        $title         = 'Contact Us | ' . config('App')->name;
-        $data['title'] = $title;
+        $memberModel     = new \App\Models\MembersModel();
+        $data['members'] = $memberModel->get_dice();
+        $data['contact'] = true;
+        $title           = 'Contact Us | ' . config('App')->name;
+        $data['title']   = $title;
 
         return view('Pages/contact', $data);
     }
@@ -69,10 +73,10 @@ class Home extends BaseController
     {
         $email = $this->request->getPost('email');
 
-        if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        if (! filter_var($email, FILTER_VALIDATE_EMAIL)) {
             return $this->response->setJSON(['status' => false, 'message' => 'Invalid Email.']);
         }
-        
+
         $model = new \App\Models\EmailSubscriptionModel();
         $model->insert(['email' => $email]);
 
