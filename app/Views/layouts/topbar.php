@@ -4,12 +4,14 @@
           <div class="col-8 px-1 text-start">              
               <div class="h-100 d-inline-flex align-items-center me-4">
                   <!-- <small class="far fa-user me-2"></small> -->
-                    <div class="d-flex align-items-center bg-primary rounded">
+                    <a href="<?= base_url('/members/single/3') ?>">
+                        <div class="d-flex align-items-center bg-primary rounded">
                         <img class="flex-shrink-0 rounded-circle me-3" src="/assets/img/coordinator.jpg" style="width:2.6rem"
                             alt="" />
                         <span class="text-white hiddenOnMobile">Coordinated by Mr. Vikas Dawani</span>
                         <small class="text-white hiddenOnDesktop">Coordinated by<br> Mr. Vikas Dawani</small>
-                    </div>                  
+                    </div>   
+                    </a>               
               </div>              
           </div>
           <div class="col-4 text-end" style="padding-right:2rem;">
@@ -22,4 +24,4 @@
           </div>
       </div>
   </div>
-  <!-- Topbar End -->
+  <!-- Topbar End -->                                        
