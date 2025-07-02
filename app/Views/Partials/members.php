@@ -6,7 +6,14 @@
         </div>
         <div class="row g-4 table-responsive">
 
-        <table class="table table-striped table-hover table-bordered" id="membersTable">
+        <?php if (! empty($members)): ?>
+            <?php foreach ($members as $i => $member): ?> 
+                <?= view('Partials/member_card', ['member' => $member]) ?>
+            <?php endforeach; ?>
+        <?php endif; ?>
+
+
+        <!-- <table class="table table-striped table-hover table-bordered" id="membersTable">
             <thead class="bg-primary text-white">
                 <tr>
                     <th>SN</th>
@@ -38,7 +45,7 @@
                     <?php endforeach; ?>
                 <?php endif; ?>
             </tbody>
-        </table>                        
+        </table>                         -->
         </div>
     </div>
 </div>
