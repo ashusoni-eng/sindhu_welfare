@@ -21,7 +21,7 @@ class Member extends BaseController
     {
         $model = new MembersModel();
 
-        $data['members'] = $model->where('member_type !=', 'member')->where('member_type !=', 'past president')
+        $data['members'] = $model->whereNotIn('member_type', ['member', 'past president', 'birthday chairmen', 'anniversary chairmen', 'ambulance chairmen', 'team'])                
             ->orWhere('id', 12)
             ->orderBy("FIELD(member_type, 'president', 'vice president', 'joint president', 'secretary',  'joint secretary', 'past president',  'treasurer' ,'working committee')", '', false)->findAll();
 

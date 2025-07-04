@@ -20,7 +20,7 @@
                 <?php if (! empty($members)): ?>
                     <?php foreach ($members as $i => $member): ?>  
                         <?php
-                          $nameColorClass = ($member['member_type'] == 'member') 
+                          $nameColorClass = ($member['member_type'] == 'member' || $member['member_type'] == 'team') 
                             ? '' 
                             : (($member['member_type'] == 'working committee') ? 'textwc' : 'text-primary');                          
 
