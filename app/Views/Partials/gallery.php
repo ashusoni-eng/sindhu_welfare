@@ -13,7 +13,7 @@
     <?php foreach ($gallery as $session => $types): ?>
     <section class="my-5">
         <!-- Session Title -->
-        <h2 class="text-center mb-4 gallery-main-heading border-bottom pb-3 border-3">Session <?php echo esc($session); ?></h2>
+        <h2 class="text-center mb-4 gallery-main-heading border-bottom border-top pt-3 pb-3 border-3">Session <?php echo esc($session); ?></h2>
 
         <!-- Captured Moments (Events) -->
         <h3 class="text-center mt-4 mb-4 gallery-main-heading">Captured Moments</h3>

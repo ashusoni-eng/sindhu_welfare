@@ -90,7 +90,7 @@
 
 <?php echo $this->include('Partials/facts'); ?>
 
-
+<?php echo $this->include('Partials/chairmens'); ?>
 
 <?php echo $this->include('Partials/contact_form'); ?>
 

@@ -42,9 +42,9 @@ class MembersModel extends Model
         $builder = $this->db->table($this->table);
 
         return $builder
-            ->whereNotIn('member_type', ['member', 'working committee', 'past president'])
+            ->whereNotIn('member_type', ['member', 'working committee', 'past president', 'birthday chairmen', 'anniversary chairmen', 'ambulance chairmen', 'team'])
             ->orWhere('id', 12)
-            ->orderBy("FIELD(member_type, 'president', 'joint president', 'vice president', 'secretary',  'joint secretary', 'treasurer', 'past president')", '', false)
+            ->orderBy("FIELD(member_type, 'president', 'vice president', 'joint president', 'secretary',  'joint secretary', 'past president', 'treasurer')", '', false)
             ->get()
             ->getResultArray();
     }
@@ -56,6 +56,17 @@ class MembersModel extends Model
         return $builder
             ->where('member_type', 'past president')
             ->orderBy("FIELD(id, 80, 127, 119, 122, 37, 12)", '', false)
+            ->get()
+            ->getResultArray();
+    }
+
+     public function get_chairmen()
+    {
+        $builder = $this->db->table($this->table);
+
+        return $builder
+            ->whereIn('id', [18, 134, 122])
+            ->orderBy("FIELD(id, 18, 134, 122)", '', false)
             ->get()
             ->getResultArray();
     }

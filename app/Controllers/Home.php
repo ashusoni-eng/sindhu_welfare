@@ -16,6 +16,7 @@ class Home extends BaseController
         $data['members']           = $memberModel->get_dice();
         $data['contact'] = false;
         $data['former_presidents'] = $memberModel->get_former_president();
+        $data['chairmens'] = $memberModel->get_chairmen();
         return view('Pages/index', $data);
     }
 

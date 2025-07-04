@@ -10,19 +10,19 @@ class Member extends BaseController
     {
         $model = new MembersModel();
 
-        $data['members'] = $model->where('status', 1)->orderBy('name', 'ASC')->findAll();
+        $data['members'] = $model->where('status', 1)->where('member_type !=', 'team')->orderBy('name', 'ASC')->findAll();
+        $data['teams'] = $model->where('status', 1)->where('member_type', 'team')->orderBy('name', 'ASC')->findAll();
 
         $data['title'] = 'Members';
 
         return view('Pages/members', $data);
-    }
-
+    }   
     public function working_committee()
     {
         $model = new MembersModel();
 
         $data['members'] = $model->where('member_type !=', 'member')->where('member_type !=', 'past president')
-        ->orWhere('id', 12)
+            ->orWhere('id', 12)
             ->orderBy("FIELD(member_type, 'president', 'vice president', 'joint president', 'secretary',  'joint secretary', 'past president',  'treasurer' ,'working committee')", '', false)->findAll();
 
         $data['title'] = 'Dice & Working Committee';
