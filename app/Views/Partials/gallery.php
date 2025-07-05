@@ -13,7 +13,8 @@
     <?php foreach ($gallery as $session => $types): ?>
     <section class="my-5">
         <!-- Session Title -->
-        <h2 class="text-center mb-4 gallery-main-heading border-bottom border-top pt-3 pb-3 border-3">Session <?php echo esc($session); ?></h2>
+        <h2 class="text-center mb-4 gallery-main-heading border-bottom border-top pt-3 pb-3 border-3">Session
+            <?php echo esc($session); ?></h2>
 
         <!-- Captured Moments (Events) -->
         <h3 class="text-center mt-4 mb-4 gallery-main-heading">Captured Moments</h3>
@@ -47,6 +48,24 @@
     <?php else: ?>
     <p class="text-center">No gallery items found.</p>
     <?php endif; ?>
+
+
+
+
+    <h3 class="text-center mt-4 mb-4 gallery-main-heading">Prativedan</h3>
+
+    <div class="col">
+        <!-- <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-img-src="/assets/img/event1.jpeg"> -->
+        <div class="gallery-item col-3">
+            <a href="/assets/prativedan.pdf" target="_blank">
+                <img src="/assets/img/gallery/prativedan.png" class="img-fluid" alt="Pradivedan"
+                    onerror="this.onerror=null; this.src='/assets/img/gallery/dummy.jpeg';">
+            </a>
+            <div class="gallery-overlay">
+                <p>Partivedan</p>
+            </div>
+        </div>
+    </div>
 
 
 
