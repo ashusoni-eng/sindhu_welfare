@@ -23,7 +23,7 @@ class Member extends BaseController
 
         $data['members'] = $model->whereNotIn('member_type', ['member', 'past president', 'birthday coordinator', 'anniversary coordinator', 'ambulance coordinator', 'team'])                
             ->orWhere('id', 12)
-            ->orderBy("FIELD(member_type, 'president', 'vice president', 'joint president', 'secretary',  'joint secretary', 'past president',  'treasurer','working committee')", '', false)->findAll();
+            ->orderBy("FIELD(member_type, 'president', 'joint president', 'vice president', 'secretary',  'joint secretary', 'past president',  'treasurer','working committee')", '', false)->findAll();
 
         $data['title'] = 'Dice & Working Committee';
 
