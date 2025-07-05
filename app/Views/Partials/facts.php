@@ -20,7 +20,7 @@
                 <div class="h-100 px-4 pe-lg-0">
                     <div class="row g-5">
                         <div class="col-sm-6">
-                            <h1 class="display-5" data-toggle="counter-up">160</h1>
+                            <h1 class="display-5" data-toggle="counter-up">161</h1>
                             <p class="fs-5 text-primary">Valued Members</p>
                         </div>
                         <div class="col-sm-6">

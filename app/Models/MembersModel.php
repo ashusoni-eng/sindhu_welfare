@@ -44,7 +44,7 @@ class MembersModel extends Model
         return $builder
             ->whereNotIn('member_type', ['member', 'working committee', 'past president', 'birthday chairmen', 'anniversary chairmen', 'ambulance chairmen', 'team'])
             ->orWhere('id', 12)
-            ->orderBy("FIELD(member_type, 'president', 'vice president', 'joint president', 'secretary',  'joint secretary', 'past president', 'treasurer')", '', false)
+            ->orderBy("FIELD(member_type, 'president', 'vice president', 'joint president', 'secretary',  'joint secretary','treasurer', 'past president')", '', false)
             ->get()
             ->getResultArray();
     }
