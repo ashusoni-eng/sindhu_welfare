@@ -18,8 +18,8 @@ class App extends BaseConfig
     public string $baseURL = 'http://localhost:8080/';
 
     public string $name = 'Sindhu Welfare Society';
-    public string $nameSuffix = '(Reg.) Gwalior';
-    public string $siteName = 'Sindhu Welfare Society (Reg.) Gwalior';
+    public string $nameSuffix = 'Gwalior';
+    public string $siteName = 'Sindhu Welfare Society Gwalior';
 
     public string $email = 'sindhuwelfaresociety1984@gmail.com';
 
@@ -27,9 +27,9 @@ class App extends BaseConfig
 
     public string $phone = '9425116156';
 
-    public string $fb = 'https://www.facebook.com/sindhuwelfare';
+    public string $fb = 'https://www.facebook.com/profile.php?id=61577829312736';
 
-    public string $insta = 'https://www.instagram.com/sindhuwelfaresociety_gwalior';
+    public string $insta = 'https://www.instagram.com/sindhuwelfaresociety.gwalior';
 
     public string $twitter = 'https://twitter.com/sindhuwelfare';
 
