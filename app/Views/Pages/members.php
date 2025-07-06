@@ -20,7 +20,7 @@
             </thead>
             <tbody>
                 <?php if (! empty($teams)): ?>
-                <h3 class="text-center">Coordinators</h3>
+                <h3 class="text-center">Work Coordinators</h3>
                 <?php foreach ($teams as $i => $team): ?>
                 <tr>
                     <td><?php echo $i + 1; ?></td>
