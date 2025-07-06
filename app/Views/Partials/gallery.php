@@ -52,17 +52,17 @@
 
 
 
-    <h3 class="text-center mt-4 mb-4 gallery-main-heading">Prativedan</h3>
+    <h3 class="text-center mt-4 mb-4 gallery-main-heading">Yearly Report</h3>
 
     <div class="col">
         <!-- <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-img-src="/assets/img/event1.jpeg"> -->
         <div class="gallery-item col-3">
             <a href="/assets/prativedan.pdf" target="_blank">
-                <img src="/assets/img/gallery/prativedan.png" class="img-fluid" alt="Pradivedan"
+                <img src="/assets/img/gallery/prativedan.png" class="img-fluid" alt="Yearly Report"
                     onerror="this.onerror=null; this.src='/assets/img/gallery/dummy.jpeg';">
             </a>
             <div class="gallery-overlay">
-                <p>Partivedan</p>
+                <p>Yearly Report</p>
             </div>
         </div>
     </div>
