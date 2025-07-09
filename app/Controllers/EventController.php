@@ -9,9 +9,10 @@ class EventController extends BaseController
     public function index()
     {
         $title = 'Events | ' . config('App')->name;
+        $today = date('Y-m-d');
         $model = new EventsModel();
 
-        $data['events'] = $model->orderBy('ISNULL(date)', 'ASC')->orderBy('date', 'ASC')->findAll();
+        $data['events'] = $model->where('date >=', $today)->orWhere('date IS NULL')->orderBy('ISNULL(date)', 'ASC')->orderBy('date', 'ASC')->findAll();
 
         $data['title'] = $title;
 
