@@ -7,7 +7,7 @@ if (! function_exists('format_father_name')) {
             return '--';
         }
 
-        $prefixes = ['shri', 'shree', 'mr.', 'mr', 'श्री'];
+        $prefixes = ['shri', 'shree', 'mr.', 'mr', 'श्री', 'Dr.', 'dr.'];
         $trimmed  = trim($name);
         foreach ($prefixes as $prefix) {
             if (stripos($trimmed, $prefix) === 0) {
@@ -26,7 +26,7 @@ if (! function_exists('format_mother_name')) {
             return '--';
         }
 
-        $prefixes = ['shrimati', 'shreemati', 'shreematee', 'shrimatee', 'mrs.', 'mr', 'श्री'];
+        $prefixes = ['shrimati', 'shreemati', 'shreematee', 'shrimatee', 'mrs.', 'mr', 'श्री', 'Ms.', 'Ms', 'ms', 'ms.'];
         $trimmed  = trim($name);
         foreach ($prefixes as $prefix) {
             if (stripos($trimmed, $prefix) === 0) {
