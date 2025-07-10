@@ -24,7 +24,17 @@ $routes->get('/members/single/(:segment)', 'Member::single/$1');
 $routes->post('/contact/send', 'Home::contact_form');
 $routes->post('/email/subscribe', 'Home::email_subscription');
 
-$routes->set404Override(function () {
-    echo view('Pages/404', ['title' => '404 Error']);
+//api
+$routes->post('api/auth/login', 'Api\AuthController::index');
+
+$routes->group('api', ['filter' => 'jwtauth'], function ($routes) {
+    $routes->get('auth/profile', 'Api\AuthController::profile');
 });
 
+
+$routes->options('api/(:any)', 'Home::options');
+
+//fallback
+// $routes->set404Override(function () {
+//     echo view('Pages/404', ['title' => '404 Error']);
+// });

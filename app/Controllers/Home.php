@@ -14,9 +14,9 @@ class Home extends BaseController
 
         $memberModel               = new \App\Models\MembersModel();
         $data['members']           = $memberModel->get_dice();
-        $data['contact'] = false;
+        $data['contact']           = false;
         $data['former_presidents'] = $memberModel->get_former_president();
-        $data['chairmens'] = $memberModel->get_chairmen();
+        $data['chairmens']         = $memberModel->get_chairmen();
         return view('Pages/index', $data);
     }
 
@@ -83,4 +83,10 @@ class Home extends BaseController
 
         return $this->response->setJSON(['status' => true, 'message' => 'Thank You For Subscribe.']);
     }
+
+    public function options()
+    {
+        return $this->response->setStatusCode(200);
+    }
+
 }
