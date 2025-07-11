@@ -33,7 +33,7 @@
             <div class="col-lg-3 col-md-6">
                 <h5 class="text-light mb-4">Quick Links</h5>
                 <a class="btn btn-link" href="<?= base_url('/') ?>">Home</a>
-                <a class="btn btn-link" href="<?= base_url('/members/dice-and-working-committee') ?>">Dice & Working
+                <a class="btn btn-link" href="<?= base_url('/members/dice-and-working-committee') ?>">Dais & Working
                     Committee</a>
                 <a class="btn btn-link" href="<?= base_url('members/all') ?>">Members</a>
                 <a class="btn btn-link" href="<?= base_url('gallery') ?>">Gallery</a>

@@ -11,7 +11,7 @@
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                 <?php if($contact) : ?>
                 <div>
-                    <h2 class="mb-4 text-center">Our Dice Members</h2>
+                    <h2 class="mb-4 text-center">Our Dais Members</h2>
                     <table class="table table-striped table-hover table-bordered">
                         <thead class="bg-primary text-white">
                             <tr>

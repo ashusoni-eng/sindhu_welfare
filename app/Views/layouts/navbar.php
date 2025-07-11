@@ -23,7 +23,7 @@
         <div class="navbar-nav  bg-light rounded pe-4 py-3 py-lg-0">
             <a href="<?= base_url('/') ?>" class="nav-item nav-link <?= $current === '' ? 'active' : '' ?>">Home</a>
             <a href="<?= base_url('/members/dice-and-working-committee') ?>"
-                class="nav-item nav-link <?= $current === 'members/dice-and-working-committee' ? 'active' : '' ?>">Dice
+                class="nav-item nav-link <?= $current === 'members/dice-and-working-committee' ? 'active' : '' ?>">Dais
                 & Working Committee</a>
             <a href="<?= base_url('members/all') ?>"
                 class="nav-item nav-link <?= $current === 'members/all' ? 'active' : '' ?>">Members</a>

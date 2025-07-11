@@ -25,7 +25,7 @@ class Member extends BaseController
             ->orWhere('id', 12)
             ->orderBy("FIELD(member_type, 'president', 'joint president', 'vice president', 'secretary',  'joint secretary',  'treasurer','past president','working committee')", '', false)->findAll();
 
-        $data['title'] = 'Dice & Working Committee';
+        $data['title'] = 'Dais & Working Committee';
 
         return view('Pages/wokring_committee', $data);
     }
